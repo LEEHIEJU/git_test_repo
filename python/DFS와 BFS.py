@@ -19,9 +19,6 @@ def bfs(graph, root):
             queue += n[n]-set(e)
             
         return visited
-    
-
-
 
 # DFS 반복
 def dfs(graph, root):
