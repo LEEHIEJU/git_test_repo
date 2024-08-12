@@ -21,7 +21,21 @@ def bfs(graph, root):
         return visited
 
 # DFS 반복
-def dfs(graph, root):
+def dfs(graph, start_node):
     visited = []
-    stack
+    stack = []
+    
+    stack.append(start_node)
+    
+    while stack:
+        node = stack.pop()
+        
+        if node not in visited:
+            visited.append(node)
+            stack.extend(reversed(graph[node]))
+    print("dfs",visited)
+    return visited
+
+dfs()
+bfs()
 
