@@ -5,10 +5,11 @@ while True:
     x,y,h = map(int,input.split())  
     if x == y == h == 0:  
         break
-
-    if x**2 + y**2 == h**2 or y**2 + x**2 == h**2:
+    
+    a, b, c = sorted([x, y, h]) 
+    # 오름차순으로 정렬해서 항상 c가 더 큰 수로 나올 수 있게 출력
+    
+    if a**2 + b**2 == c**2 :
         print("right")
     else:
         print("wrong")
-        
-        # 빗변 구하기
